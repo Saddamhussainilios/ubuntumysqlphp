@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install apache2
+sudo apt-get install nginx -y
 sudo ufw app list
 sudo ufw allow in "Apache"
 sudo apt-get install mysql-server mysql-client
