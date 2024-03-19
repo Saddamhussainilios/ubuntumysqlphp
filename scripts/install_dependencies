@@ -1,24 +1,13 @@
 #!/bin/bash
-sudo yum update -y
-
-sudo yum install -y httpd httpd-tools mod_ssl
-
-sudo systemctl start httpd
-
-sudo systemctl enable httpd
-
-sudo amazon-linux-extras | grep php
-
-sudo amazon-linux-extras enable php7.4
-
-sudo yum clean metadata
-
-sudo yum install php php-common php-pear -y
-sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm
- sudo dnf install mysql80-community-release-el9-1.noarch.rpm -y
-sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
-sudo dnf install mysql-community-client -y
-sudo dnf install mysql-community-server -y
+sudo apt-get update
+sudo apt-get install apache2
+sudo ufw app list
+sudo ufw allow in "Apache"
+sudo apt-get install mysql-server mysql-client
+sudo apt install php libapache2-mod-php php-mysql php-curl php-xml php-gd mysql-client zip unzip php-zip php-json php-mbstring
+sudo apt-get install php-dev php-pear libmcrypt-dev gcc make autoconf libc-dev pkg-config
+sudo pecl install mcrypt
+sudo service apache2 restart
 
 
 
