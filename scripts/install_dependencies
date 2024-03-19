@@ -6,7 +6,7 @@ sudo ufw allow in "Apache"
 sudo apt-get install mysql-server mysql-client
 sudo apt install php libapache2-mod-php php-mysql php-curl php-xml php-gd mysql-client zip unzip php-zip php-json php-mbstring
 sudo apt-get install php-dev php-pear libmcrypt-dev gcc make autoconf libc-dev pkg-config
-sudo pecl install mcrypt
+
 
 
 
